@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureKinectDKBindingGenerator", "AzureKinectDKBindingGenerator\AzureKinectDKBindingGenerator.csproj", "{42A5E76A-4356-4166-88FB-7AA8B32B142E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGameAzureKinectDK", "MonoGameAzureKinectDK\MonoGameAzureKinectDK.csproj", "{190DAE2A-AF0D-4034-A185-BCA2F92D2E88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureKinectDKSharp", "AzureKinectDKSharp\AzureKinectDKSharp.csproj", "{AE246F4A-2F9D-4479-AE9A-595D39C41FAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42A5E76A-4356-4166-88FB-7AA8B32B142E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42A5E76A-4356-4166-88FB-7AA8B32B142E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42A5E76A-4356-4166-88FB-7AA8B32B142E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42A5E76A-4356-4166-88FB-7AA8B32B142E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{190DAE2A-AF0D-4034-A185-BCA2F92D2E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{190DAE2A-AF0D-4034-A185-BCA2F92D2E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{190DAE2A-AF0D-4034-A185-BCA2F92D2E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{190DAE2A-AF0D-4034-A185-BCA2F92D2E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE246F4A-2F9D-4479-AE9A-595D39C41FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE246F4A-2F9D-4479-AE9A-595D39C41FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE246F4A-2F9D-4479-AE9A-595D39C41FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE246F4A-2F9D-4479-AE9A-595D39C41FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CE4318C-18FE-4B59-9D9F-DC0643C93124}
+	EndGlobalSection
+EndGlobal
