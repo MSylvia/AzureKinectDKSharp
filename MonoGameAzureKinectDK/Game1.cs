@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using AzureKinectDKSharp;
 using System;
+using System.Runtime.InteropServices;
 
 namespace MonoGameAzureKinectDK
 {
@@ -19,7 +20,7 @@ namespace MonoGameAzureKinectDK
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            Console.WriteLine(AzureKinectDKSharp.K4a.Device.InstalledCount);
+            
         }
 
         /// <summary>
@@ -31,6 +32,25 @@ namespace MonoGameAzureKinectDK
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            Console.WriteLine(AzureKinectDKSharp.k4a.K4aDeviceGetInstalledCount());
+            var device = new K4aDeviceT();
+            var result = k4a.K4aDeviceOpen(0, device);
+            ulong serialsize = 0;
+
+            if (result == K4aResultT.K4A_RESULT_FAILED)
+            {
+                base.Exit();
+                return;
+            }
+            
+            unsafe
+            {
+                sbyte* a = null;
+                k4a.K4aDeviceGetSerialnum(device, a, ref serialsize);
+                var serial = new string(a, 0, (int)serialsize);
+                Console.WriteLine(serial);
+            }
+            k4a.K4aDeviceClose(device);
 
             base.Initialize();
         }

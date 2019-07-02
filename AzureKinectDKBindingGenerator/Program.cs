@@ -13,11 +13,15 @@ namespace AzureKinectDKBindingGenerator
 
             var options = driver.Options;
             options.OutputDir = @"C:\AzureKinectDKSharp";
+            options.Verbose = true;
 
             var module = options.AddModule("AzureKinectDKSharp");
             module.IncludeDirs.Add(Path.Combine(sdkroot, @"include\k4a"));
             module.LibraryDirs.Add(Path.Combine(sdkroot, @"windows-desktop\amd64\release\lib"));
-            module.Headers.Add("k4a.hpp");
+            module.Headers.Add("k4a.h");
+            module.Headers.Add("k4a_export.h");
+            module.Headers.Add("k4aversion.h");
+            module.Headers.Add("k4atypes.h");
             module.Libraries.Add("k4a.lib");
 
             var parserOptions = driver.ParserOptions;
